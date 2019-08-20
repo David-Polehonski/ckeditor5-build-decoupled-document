@@ -34,6 +34,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
+import NestedList from '../@vForce/nestedlist/src/nestedlist';
+
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
 // Plugins to include in the build.
@@ -60,6 +62,7 @@ DecoupledEditor.builtinPlugins = [
 	ImageUpload,
 	Link,
 	List,
+	NestedList,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
@@ -72,6 +75,7 @@ DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
+			'nestedList',
 			'|',
 			'fontsize',
 			'fontfamily',

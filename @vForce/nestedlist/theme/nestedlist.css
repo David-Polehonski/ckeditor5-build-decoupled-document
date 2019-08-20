@@ -1,0 +1,36 @@
+.ck-content {
+	counter-reset: h3-section-list;
+}
+
+.ck-editor__editable.nestedlist__section {
+	outline: 1px dashed gray;
+	padding: .15rem;
+}
+
+.nestedlist__section{
+	position: relative;
+}
+
+.nestedlist__section h3::before { 
+	counter-increment: h3-section-list;
+	content: counter(h3-section-list) ".";
+	margin-right: .25rem;	
+}
+
+.nestedlist__section > ol {
+	counter-reset: top-level-list;
+	list-style-type: none;
+	padding-left: 2rem;
+} 
+
+.nestedlist__section > ol > li::before {
+	counter-increment: top-level-list;
+	content: counter(h3-section-list) "." counter(top-level-list);
+	left: 0;
+	position: absolute; 
+}
+
+.nestedlist__section li > ol {
+	list-style-type: lower-roman;
+	list-style-position: outside;
+}

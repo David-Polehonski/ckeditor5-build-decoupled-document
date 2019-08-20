@@ -24,7 +24,7 @@ module.exports = {
 		library: 'DecoupledEditor',
 
 		path: path.resolve( __dirname, 'build' ),
-		filename: 'ckeditor.js',
+		filename: 'vForceEditor.js',
 		libraryTarget: 'umd',
 		libraryExport: 'default'
 	},
